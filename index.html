@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranjit Kumar Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Shubhi Gupta Social Media & Digital Marketing Project Manager. Award-winning campaigns for Snickers, Nissan, Wolters Kluwer, OYO, Wildcraft, WaterAid and more." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --ink: #11243d;
+            --ink-soft: #1f3858;
+            --paper: #eef5ff;
+            --paper-warm: #e3eeff;
+            --paper-deep: #d2e3ff;
+            --accent: #1f6fe5;
+            /* primary blue */
+            --accent-2: #4aa7ff;
+            /* lighter blue */
+            --muted: #55708f;
+            --line: #11243d1f;
+
+            --serif: "Fira Sans", "Segoe UI", sans-serif;
+            --sans: "Fira Sans", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            --mono: "Fira Sans", ui-sans-serif, sans-serif;
+
+            --max: 1320px;
+        }
+
+        .hero-title {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0000FF;
+            color: var(--ink);
+            font-family: var(--sans);
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* paper grain */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(31, 111, 229, .06) 0, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(74, 167, 255, .08) 0, transparent 40%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0.04 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+            pointer-events: none;
+            opacity: .5;
+            z-index: 1;
+            mix-blend-mode: multiply;
+        }
+
+        main,
+        header,
+        section,
+        footer {
+            position: relative;
+            z-index: 2;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* --- NAV --- */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 18px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(238, 245, 255, .85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-mark {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: 20px;
+            letter-spacing: -0.02em;
+            font-style: italic;
+        }
+
+        .nav-mark span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-family: var(--mono);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .nav-links a {
+            position: relative;
+            transition: color .25s;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: width .3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        @media (max-width:720px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* --- HERO --- */
+        .hero {
+            min-height: 100vh;
+            padding: 140px 32px 80px;
+            max-width: var(--max);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        @media (min-width:980px) {
+            .hero {
+                grid-template-columns: 1.4fr 1fr;
+                gap: 80px;
+            }
+        }
+
+        .hero-meta {
+            font-family: var(--mono);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        .hero-meta .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .hero-title {
+            font-family: var(--serif);
+            font-weight: 300;
+            font-size: clamp(54px, 9vw, 130px);
+            line-height: 0.92;
+            letter-spacing: -0.035em;
+            margin-bottom: 28px;
+        }
+
+        .hero-title em {
+            font-style: italic;
+            font-weight: 400;
+            color: var(--accent);
+        }
+
+        .hero-title .ampersand {
+            font-family: var(--serif);
+            font-style: italic;
+            font-weight: 300;
+            color: var(--accent-2);
+        }
+
+        .hero-sub {
+            font-family: var(--serif);
+            font-style: italic;
+            font-weight: 300;
+            font-size: clamp(20px, 2.4vw, 28px);
+            line-height: 1.4;
+            color: var(--ink-soft);
+            max-width: 640px;
+            margin-bottom: 40px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px 36px;
+            padding-top: 28px;
+            border-top: 1px solid var(--line);
+            max-width: 760px;
+        }
+
+        @media (min-width:980px) {
+            .hero-stats {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+
+        .hero-stats .stat-num {
+            font-family: var(--serif);
+            font-size: 38px;
+            font-weight: 500;
+            line-height: 1;
+            color: var(--ink);
+            letter-spacing: -0.02em;
+        }
+
+        .hero-stats .stat-label {
+            font-family: var(--mono);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-top: 6px;
+        }
+
+        .hero-photo {
+            position: relative;
+            aspect-ratio: 4/5;
+            max-width: 440px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .hero-photo .frame {
+            position: absolute;
+            inset: 0;
+            background: var(--ink);
+            border-radius: 4px;
+            overflow: hidden;
+            transform: rotate(-2deg);
+            box-shadow:
+                0 30px 60px -20px rgba(26, 23, 21, .3),
+                0 10px 20px -10px rgba(26, 23, 21, .2);
+        }
+
+        .hero-photo .frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: contrast(1.05) saturate(1.05);
+        }
+
+        .hero-photo .tag {
+            position: absolute;
+            top: -18px;
+            right: -12px;
+            background: var(--accent);
+            color: var(--paper);
+            font-family: var(--mono);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 8px 14px;
+            transform: rotate(4deg);
+            z-index: 2;
+            box-shadow: 0 6px 14px -4px rgba(31, 111, 229, .45);
+        }
+
+        .hero-photo .corner {
+            position: absolute;
+            bottom: -18px;
+            left: -18px;
+            background: var(--paper);
+            border: 1px solid var(--ink);
+            padding: 14px 18px;
+            transform: rotate(-3deg);
+            z-index: 2;
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 14px;
+            max-width: 200px;
+            line-height: 1.3;
+        }
+
+        .hero-photo .corner strong {
+            color: var(--accent);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* --- MARQUEE --- */
+        .marquee {
+            background: var(--ink);
+            color: var(--paper);
+            padding: 22px 0;
+            overflow: hidden;
+            border-top: 1px solid var(--ink);
+            border-bottom: 1px solid var(--ink);
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 60px;
+            white-space: nowrap;
+            animation: scroll 40s linear infinite;
+            font-family: var(--serif);
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        .marquee-track span {
+            display: inline-flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .marquee-track em {
+            font-style: italic;
+            color: var(--accent-2);
+            font-weight: 300;
+        }
+
+        .marquee-track .star {
+            color: var(--accent);
+            font-size: 18px;
+            display: inline-block;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* --- SECTIONS --- */
+        .section {
+            padding: 120px 32px;
+            max-width: var(--max);
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: var(--mono);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--accent);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .section-label::before {
+            content: "";
+            width: 32px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .section-heading {
+            font-family: var(--serif);
+            font-weight: 300;
+            font-size: clamp(44px, 6vw, 84px);
+            line-height: 1;
+            letter-spacing: -0.03em;
+            margin-bottom: 56px;
+            max-width: 14ch;
+        }
+
+        .section-heading em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        /* --- ABOUT --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 56px;
+        }
+
+        @media (min-width:880px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 80px;
+            }
+        }
+
+        .about-intro {
+            font-family: var(--serif);
+            font-weight: 300;
+            font-size: clamp(22px, 2.6vw, 32px);
+            line-height: 1.35;
+            letter-spacing: -0.01em;
+        }
+
+        .about-intro p+p {
+            margin-top: 1em;
+        }
+
+        .about-intro em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .about-body {
+            font-size: 16px;
+            line-height: 1.75;
+            color: var(--ink-soft);
+        }
+
+        .about-body p+p {
+            margin-top: 1.2em;
+        }
+
+        .skills {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 8px 16px;
+        }
+
+        .skills .skill {
+            font-family: var(--mono);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--ink);
+            padding: 8px 0;
+            border-top: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .skills .skill::after {
+            content: "●";
+            color: var(--accent);
+            font-size: 8px;
+        }
+
+        /* --- CLIENT GRID --- */
+        .clients-section {
+            background: var(--paper-warm);
+            padding: 120px 32px;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .clients-inner {
+            max-width: var(--max);
+            margin: 0 auto;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+            border-top: 1px solid var(--ink);
+            border-left: 1px solid var(--ink);
+        }
+
+        @media (min-width:680px) {
+            .clients-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width:980px) {
+            .clients-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .client-cell {
+            border-right: 1px solid var(--ink);
+            border-bottom: 1px solid var(--ink);
+            padding: 36px 24px;
+            min-height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: var(--paper-warm);
+            transition: background .3s, color .3s;
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .client-cell:hover {
+            background: var(--ink);
+            color: var(--paper);
+        }
+
+        .client-cell:hover .client-tag {
+            color: var(--accent-2);
+        }
+
+        .client-name {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: 26px;
+            letter-spacing: -0.01em;
+            line-height: 1.1;
+        }
+
+        .client-tag {
+            font-family: var(--mono);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            transition: color .3s;
+        }
+
+        .client-cell.featured {
+            background: var(--paper-warm);
+            color: var(--ink);
+            border-right: 1px solid var(--ink);
+            border-bottom: 1px solid var(--ink);
+        }
+
+        .client-cell.featured .client-tag {
+            color: var(--muted);
+            opacity: 1;
+        }
+
+        .client-cell.featured:hover {
+            background: var(--ink);
+        }
+
+        .client-cell .num {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            font-family: var(--mono);
+            font-size: 10px;
+            color: var(--muted);
+            opacity: .6;
+        }
+
+        .client-cell:hover .num {
+            color: var(--paper);
+            opacity: .5;
+        }
+
+        /* --- CASE STUDIES --- */
+        .cases {
+            padding: 140px 32px;
+        }
+
+        .cases-inner {
+            max-width: var(--max);
+            margin: 0 auto;
+        }
+
+        .case {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            padding: 80px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .case:first-of-type {
+            border-top: 1px solid var(--ink);
+        }
+
+        @media (min-width:880px) {
+            .case {
+                grid-template-columns: 220px 1fr 1fr;
+                gap: 64px;
+            }
+        }
+
+        .case-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .case-num {
+            font-family: var(--serif);
+            font-style: italic;
+            font-weight: 300;
+            font-size: 56px;
+            line-height: 1;
+            color: var(--accent);
+        }
+
+        .case-tag {
+            font-family: var(--mono);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--muted);
+        }
+
+        .case-year {
+            font-family: var(--mono);
+            font-size: 11px;
+            color: var(--ink);
+            padding: 4px 8px;
+            border: 1px solid var(--ink);
+            align-self: flex-start;
+        }
+
+        .case-content h3 {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(32px, 3.6vw, 48px);
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            margin-bottom: 14px;
+        }
+
+        .case-client {
+            font-family: var(--mono);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--accent);
+            margin-bottom: 24px;
+        }
+
+        .case-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--ink-soft);
+            margin-bottom: 16px;
+        }
+
+        .video-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .video-links a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1.5px;
+            font-weight: 600;
+            padding: 6px 10px;
+            border: 1px solid var(--accent);
+            border-radius: 999px;
+            background: rgba(31, 111, 229, .08);
+            transition: background .2s ease, color .2s ease, transform .2s ease;
+        }
+
+        .video-links a:hover {
+            background: var(--accent);
+            color: var(--paper);
+            transform: translateY(-1px);
+        }
+
+        .case-content .idea {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 22px;
+            line-height: 1.4;
+            color: var(--ink);
+            padding: 16px 0 16px 20px;
+            border-left: 2px solid var(--accent);
+            margin: 20px 0;
+        }
+
+        .case-gallery-wrap {
+            position: relative;
+            margin: 22px 0 26px;
+        }
+
+        .case-gallery {
+            display: flex;
+            gap: 14px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 6px;
+            scrollbar-width: none;
+        }
+
+        .case-gallery::-webkit-scrollbar {
+            display: none;
+        }
+
+        .case-gallery img {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 420px;
+            object-fit: contain;
+            object-position: center;
+            scroll-snap-align: start;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 10px;
+            background:
+                linear-gradient(180deg, #ffffff, #f7fbff);
+            box-shadow:
+                0 10px 24px -20px rgba(17, 36, 61, .55),
+                0 1px 0 rgba(255, 255, 255, .8) inset;
+        }
+
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid var(--line);
+            background: rgba(238, 245, 255, .92);
+            color: var(--accent);
+            font-size: 22px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 3;
+            box-shadow: 0 10px 20px -14px rgba(17, 36, 61, .6);
+        }
+
+        .gallery-nav.prev {
+            left: 10px;
+        }
+
+        .gallery-nav.next {
+            right: 10px;
+        }
+
+        .gallery-nav:disabled {
+            opacity: .45;
+            cursor: not-allowed;
+        }
+
+        @media (max-width:560px) {
+            .gallery-nav {
+                width: 34px;
+                height: 34px;
+                font-size: 20px;
+            }
+
+            .gallery-nav.prev {
+                left: 8px;
+            }
+
+            .gallery-nav.next {
+                right: 8px;
+            }
+
+            .case-gallery img {
+                height: 320px;
+            }
+        }
+
+        .case-results {
+            background: var(--paper-warm);
+            padding: 28px;
+            border: 1px solid var(--line);
+            align-self: start;
+        }
+
+        .case-results h4 {
+            font-family: var(--mono);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .results-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            list-style: none;
+        }
+
+        .results-list li {
+            display: flex;
+            gap: 16px;
+            align-items: baseline;
+            padding-bottom: 14px;
+            border-bottom: 1px dashed var(--line);
+        }
+
+        .results-list li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .results-list .num {
+            font-family: var(--serif);
+            font-weight: 500;
+            font-size: 28px;
+            color: var(--accent);
+            line-height: 1;
+            flex-shrink: 0;
+            letter-spacing: -0.02em;
+        }
+
+        .results-list .desc {
+            font-size: 13px;
+            color: var(--ink-soft);
+            line-height: 1.4;
+        }
+
+        .case-award {
+            margin-top: 18px;
+            padding: 12px 14px;
+            background: var(--ink);
+            color: var(--paper);
+            font-family: var(--mono);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .case-award::before {
+            content: "★";
+            color: var(--accent-2);
+            font-size: 14px;
+        }
+
+        /* --- INDUSTRIES --- */
+        .industries-section {
+            background: var(--ink);
+            color: var(--paper);
+            padding: 140px 32px;
+        }
+
+        .industries-inner {
+            max-width: var(--max);
+            margin: 0 auto;
+        }
+
+        .industries-section .section-label {
+            color: var(--accent-2);
+        }
+
+        .industries-section .section-label::before {
+            background: var(--accent-2);
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: #3a342f;
+            border: 1px solid #3a342f;
+            margin-top: 40px;
+        }
+
+        @media (min-width:680px) {
+            .industries-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width:1020px) {
+            .industries-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .industry {
+            background: var(--ink);
+            padding: 32px 28px;
+            transition: background .3s;
+        }
+
+        .industry:hover {
+            background: #2a2520;
+        }
+
+        .industry-num {
+            font-family: var(--mono);
+            font-size: 10px;
+            color: var(--accent-2);
+            letter-spacing: 0.16em;
+            margin-bottom: 14px;
+        }
+
+        .industry-name {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: 26px;
+            margin-bottom: 10px;
+            letter-spacing: -0.01em;
+            color: var(--paper);
+        }
+
+        .industry-name em {
+            font-style: italic;
+            color: var(--accent-2);
+        }
+
+        .industry-clients {
+            font-size: 13px;
+            color: #c4b8a8;
+            line-height: 1.5;
+        }
+
+        /* --- SERVICES --- */
+        .services-list {
+            display: grid;
+            gap: 0;
+            margin-top: 32px;
+            border-top: 1px solid var(--ink);
+        }
+
+        .service-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 24px;
+            padding: 32px 0;
+            border-bottom: 1px solid var(--line);
+            align-items: start;
+            transition: padding .3s;
+        }
+
+        @media (min-width:880px) {
+            .service-row {
+                grid-template-columns: 80px 1fr 2fr;
+                gap: 48px;
+                align-items: center;
+            }
+        }
+
+        .service-row:hover {
+            padding-left: 16px;
+        }
+
+        .service-row:hover .service-name {
+            color: var(--accent);
+        }
+
+        .service-num {
+            font-family: var(--mono);
+            font-size: 13px;
+            color: var(--muted);
+            letter-spacing: 0.04em;
+        }
+
+        .service-name {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(24px, 3vw, 36px);
+            letter-spacing: -0.01em;
+            transition: color .3s;
+            line-height: 1.1;
+        }
+
+        .service-name em {
+            font-style: italic;
+        }
+
+        .service-desc {
+            font-size: 15px;
+            color: var(--ink-soft);
+            line-height: 1.6;
+        }
+
+        /* --- TESTIMONIAL / IDEA QUOTE --- */
+        .quote-section {
+            padding: 140px 32px;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .quote {
+            font-family: var(--serif);
+            font-weight: 300;
+            font-style: italic;
+            font-size: clamp(28px, 4vw, 52px);
+            line-height: 1.3;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+        }
+
+        .quote .mark {
+            font-family: var(--serif);
+            font-size: 80px;
+            color: var(--accent);
+            line-height: 0;
+            vertical-align: -0.3em;
+            margin: 0 8px;
+        }
+
+        .quote em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .quote-attrib {
+            margin-top: 32px;
+            font-family: var(--mono);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--muted);
+        }
+
+        /* --- CONTACT --- */
+        .contact-section {
+            padding: 140px 32px 80px;
+            max-width: var(--max);
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+        }
+
+        @media (min-width:880px) {
+            .contact-grid {
+                grid-template-columns: 1.5fr 1fr;
+                gap: 80px;
+                align-items: end;
+            }
+        }
+
+        .contact-heading {
+            font-family: var(--serif);
+            font-weight: 300;
+            font-size: clamp(60px, 9vw, 130px);
+            line-height: 0.92;
+            letter-spacing: -0.035em;
+        }
+
+        .contact-heading em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contact-row {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .contact-row .label {
+            font-family: var(--mono);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--muted);
+        }
+
+        .contact-row .value {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 400;
+            color: var(--ink);
+            transition: color .25s;
+        }
+
+        .contact-row a:hover .value {
+            color: var(--accent);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--ink);
+            color: var(--paper);
+            padding: 40px 32px 32px;
+            margin-top: 40px;
+        }
+
+        .footer-inner {
+            max-width: var(--max);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-family: var(--mono);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #c4b8a8;
+        }
+
+        .footer-inner span em {
+            color: var(--accent-2);
+            font-style: italic;
+            font-family: var(--serif);
+        }
+
+        /* Subtle entrance animation additive only, never hides content */
+        .reveal {
+            opacity: 1;
+            transform: none;
+            transition: opacity .8s ease, transform .8s ease;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .js .reveal {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            .js .reveal.in {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <a href="#top" class="nav-mark" >Ranjit <span>Kumar</span></a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#clients">Clients</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header id="top" class="hero">
+        <div style="color: #ffffff; font-weight: bold; font-style: italic;">
+            <div class="hero-meta">
+                <span class="dot"></span>
+                <span>Portfolio · 2026</span>
+                <span>·</span>
+                <span>Mumbai, IN</span>
+            </div>
+            <h2 class="hero-title" style="color: #ffffff; font-weight: bold; font-style: italic;">Architecture. Optimization. Scale</h2>
+            <p class="hero-sub" style="color: #ffffff; font-weight: bold; font-style: italic;">Microsoft-certified Data Engineer and Database Administrator (DBA) with over 14 years of
+                experience architecting high-availability systems, streamlining enterprise ETL pipelines, and optimizing
+                massive data ecosystems. A proven track record of managing mission-critical infrastructure—from
+                cloud-native tech applications to public sector databases scaling over 80 million records. Specialized
+                in bridging the gap between legacy database administration and modern, automated cloud data engineering.
+            </p>
+            <div class="hero-stats">
+                <div>
+                    <div class="stat-num">14+</div>
+                    <div class="stat-label">Years<br />Experience</div>
+                </div>
+                <div>
+                    <div class="stat-num">80M+</div>
+                    <div class="stat-label">Records<br />Managed</div>
+                </div>
+                <div>
+                    <div class="stat-num">Global</div>
+                    <div class="stat-label">US, IN<br /></div>
+                </div>
+                <div>
+                    <div class="stat-num">ON-PREM + CLOUD</div>
+                    <div class="stat-label">Hybrid<br />Data</div>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <!-- MARQUEE OF BRANDS -->
+    <!-- ABOUT -->
+    <section class="section reveal" id="about">
+        <div class="section-label" style="color: #ffffff; font-weight: bold; font-style: italic;">01 About</div>
+
+        <div class="about-grid">
+            <div class="about-intro" style="color: #ffffff; font-weight: bold; font-style: italic;">
+                <p>Results-driven SQL Developer, Database Administrator (DBA), and Data Engineer with 14+ years of
+                    experience in database administration, SQL development, ETL processes, cloud technologies,
+                    performance tuning, and AI-assisted data solutions</p>
+            </div>
+            <div class="about-body" style="color: #ffffff; font-weight: bold; font-style: italic;">
+                <p>. Expertise in MS SQL Server, Azure SQL, Oracle, PL/SQL, SSIS, Azure Data Factory, Power BI, backup
+                    and recovery, disaster recovery, database optimization, and enterprise-scale data management.</p>
+
+                <div class="skills" >
+                    <span class="skill" style="color: #ffffff; font-weight: bold; font-style: italic;">MySQL</span>
+                    <span class="skill" style="color: #ffffff; font-weight: bold; font-style: italic;">Azure SQL</span>
+                    <span class="skill" style="color: #ffffff; font-weight: bold; font-style: italic;">Azure Data Factory (ADF)</span>
+                    <span class="skill" style="color: #ffffff; font-weight: bold; font-style: italic;">Python</span>
+                    <span class="skill" style="color: #ffffff; font-weight: bold; font-style: italic;">Kubernetes</span>
+                    <span class="skill" style="color: #ffffff; font-weight: bold; font-style: italic;">Oracle Enterprise Manager</span>
+                    <span class="skill" style="color: #ffffff; font-weight: bold; font-style: italic;">Backup & Recovery</span>
+                    <span class="skill" style="color: #ffffff; font-weight: bold; font-style: italic;">AI-Assisted Data Solutions</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section class="clients-section reveal" id="clients" >
+        <div class="clients-inner">
+            <div class="section-label" style="color: black;" >02 Selected Clients</div>
+            <h2 style="color: black;" >Brands I've had the <em>privilege</em> of building for.</h2>
+
+            <div class="flex flex-col">
+                <div class="">
+                    <div class="num" style="color: black;">01</div>
+                    <div class="client-name" style="color: black;">Defence Accounts Pension, Allahabad</div>
+                    <div class="client-tag" style="color: black;">Defence Pension Management System</div>
+                </div>
+                <div class="">
+                    <div class="num" style="color: black;">02</div>
+                    <div class="client-name" style="color: black;">Sarva Shiksha Abhiyan & Saakshar Bharat Mission, Rajasthan</div>
+                    <div class="client-tag" style="color: black;">Government Survey Data Processing & Database Management System</div>
+                </div>
+                <div class="">
+                    <div class="num" style="color: black;">03</div>
+                    <div class="client-name" style="color: black;">Bureau of Immigration</div>
+                    <div class="client-tag" style="color: black;">Immigration Arrival & Departure Data Processing System</div>
+                </div>
+                <div class="">
+                    <div class="num" style="color: black;">04</div>
+                    <div class="client-name" style="color: black;">Tata Institute of Social Sciences (TISS), Mumbai</div>
+                    <div class="client-tag" style="color: black;">Examination Data Processing & Assessment Management System</div>
+                </div>
+                <div class="">
+                    <div class="num" style="color: black;">05</div>
+                    <div class="client-name" style="color: black;">Bank of India</div>
+                    <div class="client-tag" style="color: black;">Account Opening Form Digitization & Data Validation System</div>
+                </div>
+                <div class="">
+                    <div class="num" style="color: black;">06</div>
+                    <div class="client-name" style="color: black;">Municipal Corporation of Greater Mumbai (MCGM)</div>
+                    <div class="client-tag" style="color: black;">Birth & Death Records Management System</div>
+                </div>
+                <div class="">
+                    <div class="num" style="color: black;">07</div>
+                    <div class="client-name" style="color: black;">Raven LMS</div>
+                    <div class="client-tag" style="color: black;">Database Design, Configuration & Data Seeding Automation</div>
+                </div>
+                <div class="">
+                    <div class="num" style="color: black;">08</div>
+                    <div class="client-name" style="color: black;">Apollo 2.0</div>
+                    <div class="client-tag" style="color: black;">Content Management & Digital Asset Platform</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section class="cases" id="work">
+        <div class="cases-inner">
+            <div class="section-label" style="color: #ffffff; font-weight: bold; font-style: italic;">03 Case Studies</div>
+            <h2 class="section-heading" style="color: #ffffff; font-weight: bold; font-style: italic;">Selected work, <em>annotated</em>.</h2>
+
+            <!-- Wolters Kluwer -->
+            <article class="case-card reveal">
+                <div class="case-content">
+                    <header class="case-header">
+                        <h3 style="color: #ffffff; font-weight: bold; font-style: italic;">First Project 2008 to 2009: Defence Accounts Pension, Allahabad – Defence Pension Management
+                            System</h3>
+                        <p class="case-description" style="color: #ffffff; font-weight: bold; font-style: italic;">
+                            Designed and implemented a centralized SQL Server database for the Defence Accounts Pension
+                            Office, Allahabad, to manage pension records for retired defence personnel. The project
+                            involved collecting pension data from multiple teams, performing data cleansing and
+                            validation, developing ETL processes, and maintaining a secure, high-quality database to
+                            support accurate pension processing and reporting.
+                        </p>
+                    </header>
+
+                    <div class="case-grid">
+                        <section class="case-section idea">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Responsibilities</h2>
+                            <ul class="responsive-list">
+                                <li>Designed and implemented the SQL Server database schema for storing defence pension
+                                    records.</li>
+                                <li>Created normalized database tables, indexes, constraints, stored procedures, views,
+                                    and user-defined functions.</li>
+                                <li>Coordinated with multiple teams to collect and consolidate pension data from
+                                    different sources.</li>
+                                <li>Imported pension data received in CSV format into SQL Server using ETL processes.
+                                </li>
+                                <li>Developed SQL scripts and ETL workflows for automated data loading and validation.
+                                </li>
+                                <li>Performed data cleansing activities before loading records into the production
+                                    database, including:
+                                    <ul class="sub-list">
+                                        <li>Removal of duplicate records</li>
+                                        <li>Trimming extra spaces from text fields</li>
+                                        <li>Removing unwanted special characters</li>
+                                        <li>Standardizing data formats</li>
+                                        <li>Validating mandatory fields</li>
+                                        <li>Verifying pension identifiers and record consistency</li>
+                                    </ul>
+                                </li>
+                                <li>Implemented business validation rules to ensure data accuracy and integrity.</li>
+                                <li>Created exception reports for rejected or invalid records to support issue
+                                    resolution.</li>
+                                <li>Optimized SQL queries and indexes for improved database performance.</li>
+                                <li>Managed database backup, recovery, and routine maintenance activities.</li>
+                                <li>Supported users by resolving data-related issues and ensuring timely availability of
+                                    pension records.</li>
+                                <li>Prepared operational and management reports for stakeholders.</li>
+                            </ul>
+                        </section>
+
+                        <section class="case-section achievements">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Achievements</h2>
+                            <ul class="responsive-list highlight-list">
+                                <li>Successfully designed and implemented a centralized pension database for retired
+                                    defence personnel.</li>
+                                <li>Automated CSV-based data import and validation processes, reducing manual effort and
+                                    improving accuracy.</li>
+                                <li>Improved overall data quality by implementing duplicate detection, data cleansing,
+                                    and validation rules.</li>
+                                <li>Enhanced database performance through query optimization and index tuning.</li>
+                                <li>Established reliable backup and recovery procedures to ensure data availability and
+                                    business continuity.</li>
+                                <li>Delivered a secure, scalable, and high-performance database solution supporting
+                                    efficient pension record management.</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <section class="case-section technologies">
+                        <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Technologies Used</h2>
+                        <ul class="tech-tags">
+                            <li>Microsoft SQL Server</li>
+                            <li>T-SQL</li>
+                            <li>SQL Server Management Studio (SSMS)</li>
+                            <li>SQL Server Integration Services (SSIS)</li>
+                            <li>CSV Data Import</li>
+                            <li>Stored Procedures</li>
+                            <li>Views</li>
+                            <li>User-Defined Functions (UDFs)</li>
+                            <li>Data Cleansing</li>
+                            <li>Data Validation</li>
+                            <li>Query Performance Tuning</li>
+                            <li>Database Backup & Recovery</li>
+                        </ul>
+                    </section>
+                </div>
+            </article>
+
+            <!-- Snickers Kesar Pista -->
+            <article class="case-card reveal">
+                <div class="case-content">
+                    <header class="case-header" style="color: #ffffff; font-weight: bold; font-style: italic;">
+                        <h3>Project 2 2010 to 2012: Sarva Shiksha Abhiyan & Saakshar Bharat Mission, Rajasthan –
+                            Government Survey Data Processing & Database Management System</h3>
+                        <p class="case-description">
+                            <strong>Role:</strong> SQL Server DBA | ETL Developer | ABBYY ICR Developer <br>
+                            <strong>Client:</strong> Government of Rajasthan <br><br>
+                            Designed and implemented an end-to-end data capture and processing solution for the
+                            Government of Rajasthan to digitize large-scale survey forms and generate accurate
+                            demographic information. The system was developed to capture, validate, process, and store
+                            household and citizen data used for government planning, literacy analysis, and
+                            administrative reporting across Sarva Shiksha Abhiyan (SSA) and Saakshar Bharat Mission
+                            (SBM).
+                        </p>
+                    </header>
+
+                    <div class="case-grid">
+                        <section class="case-section idea">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Responsibilities</h2>
+                            <ul class="responsive-list">
+                                <li>Designed ICR-enabled survey forms for large-scale government data collection.</li>
+                                <li>Developed ABBYY FlexiCapture templates and custom scripts for automated extraction
+                                    of handwritten and printed information from ICR forms.</li>
+                                <li>Configured field recognition rules, validation logic, and export settings in ABBYY
+                                    FlexiCapture.</li>
+                                <li>Conducted training programs for government officials, district coordinators, and
+                                    field staff across all 33 districts of Rajasthan on the correct process for
+                                    completing ICR forms.</li>
+                                <li>Coordinated with district-level government offices throughout project implementation
+                                    and deployment.</li>
+                                <li>Extracted structured data from scanned forms and exported it into CSV format.</li>
+                                <li>Developed SSIS packages to import extracted data into SQL Server.</li>
+                                <li>Performed data cleansing, transformation, validation, and quality checks before
+                                    loading records into the production database.</li>
+                                <li>Implemented business validation rules to remove duplicate records, trim extra
+                                    spaces, eliminate invalid special characters, and validate mandatory fields.</li>
+                                <li>Designed and implemented the SQL Server database based on client requirements,
+                                    creating tables, indexes, stored procedures, views, and database constraints.</li>
+                                <li>Generated validation reports, exception reports, and reconciliation reports.</li>
+                                <li>Supported User Acceptance Testing (UAT), production deployment, and final data
+                                    handover to the Government of Rajasthan.</li>
+                            </ul>
+                        </section>
+
+                        <section class="case-section processing-scope">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Government Data Processing Scope</h2>
+                            <ul class="responsive-list">
+                                <li>Literacy status of individuals along with male and female literacy statistics.</li>
+                                <li>Identification of female heads of households.</li>
+                                <li>Family demographic information and household member details.</li>
+                                <li>Village, Gram Panchayat, Block, and District-wise geo-records.</li>
+                                <li>Population and family statistics for government survey and census-style reporting.
+                                </li>
+                                <li>District-wise and state-level consolidated reports for planning and policy making.
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <div class="case-grid">
+                        <section class="case-section achievements">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Achievements</h2>
+                            <ul class="responsive-list highlight-list">
+                                <li>Successfully implemented an end-to-end ICR-based government survey data processing
+                                    solution across all 33 districts of Rajasthan.</li>
+                                <li>Automated data extraction from thousands of handwritten forms using ABBYY
+                                    FlexiCapture and custom scripting.</li>
+                                <li>Developed core SQL Server databases and automated robust ETL workflows using SSIS.
+                                </li>
+                                <li>Significantly improved data quality through deep validation, duplicate detection,
+                                    and automated cleansing processes.</li>
+                                <li>Delivered accurate district-wise, block-wise, village-wise, and household-level
+                                    reports for government analysis and planning.</li>
+                                <li>Successfully completed production deployment and secured final data handover to the
+                                    Government of Rajasthan.</li>
+                            </ul>
+                        </section>
+
+                        <section class="case-section technologies">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Technologies Used</h2>
+                            <ul class="tech-tags">
+                                <li>Microsoft SQL Server</li>
+                                <li>SQL Server Integration Services (SSIS)</li>
+                                <li>ABBYY FlexiCapture</li>
+                                <li>Intelligent Character Recognition (ICR)</li>
+                                <li>Optical Character Recognition (OCR)</li>
+                                <li>T-SQL</li>
+                                <li>SQL Server Management Studio (SSMS)</li>
+                                <li>Database Design</li>
+                                <li>Stored Procedures</li>
+                                <li>Views</li>
+                                <li>ETL Development</li>
+                                <li>Data Cleansing & Validation</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </article>
+            <!-- WaterAid -->
+            <article class="case-card reveal">
+                <div class="case-content">
+                    <header class="case-header">
+                        <h3>Project 3: Bureau of Immigration – Immigration Arrival & Departure Data Processing System
+                        </h3>
+                        <p class="case-description">
+                            <strong>Role:</strong> SQL Server DBA | ETL Developer | ICR Developer <br>
+                            <strong>Client:</strong> Bureau of Immigration, GVK Mumbai Airport <br><br>
+                            Developed and supported an Intelligent Character Recognition (ICR)-based data processing
+                            solution for the Bureau of Immigration to digitize Arrival and Departure (A&D) forms
+                            received from GVK-operated immigration counters. The project focused on extracting
+                            handwritten and printed data from immigration forms, validating and cleansing it,
+                            transforming it into structured database layouts, and coordinating directly with the
+                            National Informatics Centre (NIC) for production deployment.
+                        </p>
+                    </header>
+
+                    <div class="case-grid">
+                        <section class="case-section idea">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Responsibilities</h2>
+                            <ul class="responsive-list">
+                                <li>Developed ICR templates for automated extraction of handwritten and printed
+                                    information from immigration Arrival and Departure forms.</li>
+                                <li>Configured field recognition, validation rules, and export settings for accurate
+                                    data capture.</li>
+                                <li>Extracted passenger profiles from scanned forms and exported structured data into
+                                    CSV format.</li>
+                                <li>Developed SSIS packages to automate importing extracted data files into SQL Server.
+                                </li>
+                                <li>Performed thorough data cleansing, handling duplication checks, trimming, special
+                                    character filtering, and form field format standardization.</li>
+                                <li>Developed T-SQL scripts and cursor-based processing routines to transform extracted
+                                    data into the client-required database schema.</li>
+                                <li>Designed and maintained production database structures while generating deep
+                                    validation, reconciliation, and exception reports.</li>
+                                <li>Coordinated directly with the National Informatics Centre (NIC) team during crucial
+                                    UAT testing stages and production deployment cycles.</li>
+                                <li>Monitored database maintenance schedules, automated backups, and general query
+                                    health metrics.</li>
+                            </ul>
+                        </section>
+
+                        <section class="case-section achievements">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Achievements</h2>
+                            <ul class="responsive-list highlight-list">
+                                <li>Successfully deployed an production-grade ICR-based data capture system for
+                                    processing massive daily volumes of immigration Arrival and Departure forms.</li>
+                                <li>Automated the ingestion of handwritten and printed metrics from passenger forms,
+                                    substantially reducing manual operational backlogs.</li>
+                                <li>Significantly boosted data integrity by baking out complex field validations,
+                                    duplicate detections, and cleansing workflows directly into the ETL layers.</li>
+                                <li>Engineered performant, highly automated SSIS ingestion workflows targeting robust
+                                    SQL Server database clusters.</li>
+                                <li>Delivered fully normalized, secure, and validated transactional logs to the National
+                                    Informatics Centre (NIC) matching absolute security profiles.</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <section class="case-section technologies">
+                        <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Technologies Used</h2>
+                        <ul class="tech-tags">
+                            <li>Microsoft SQL Server</li>
+                            <li>SQL Server Integration Services (SSIS)</li>
+                            <li>T-SQL</li>
+                            <li>Intelligent Character Recognition (ICR)</li>
+                            <li>ABBYY FlexiCapture</li>
+                            <li>SQL Server Management Studio (SSMS)</li>
+                            <li>Stored Procedures</li>
+                            <li>SQL Cursors</li>
+                            <li>Views</li>
+                            <li>Database Design</li>
+                            <li>Data Cleansing & Validation</li>
+                            <li>CSV Data Processing</li>
+                        </ul>
+                    </section>
+                </div>
+            </article>
+            <!-- Wildcraft -->
+            <article class="case-card reveal">
+                <div class="case-content">
+                    <header class="case-header">
+                        <h3>Project 4: Tata Institute of Social Sciences (TISS), Mumbai – Examination Data Processing &
+                            Assessment Management System</h3>
+                        <p class="case-description">
+                            <strong>Role:</strong> SQL Server DBA | ETL Developer | ABBYY ICR/OMR Developer | Data
+                            Engineer <br>
+                            <strong>Client:</strong> Tata Institute of Social Sciences (TISS), Mumbai <br><br>
+                            Developed and supported an automated examination data processing solution for TISS to
+                            digitize and grade high-stakes academic evaluations. The project involved processing
+                            examination answer sheets using OMR (Optical Mark Recognition) and ICR (Intelligent
+                            Character Recognition) technologies, extracting student responses through ABBYY
+                            FlexiCapture, validating metrics against master answer keys, and structuring records
+                            securely into a centralized database environment.
+                        </p>
+                    </header>
+
+                    <div class="case-grid">
+                        <section class="case-section idea">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Responsibilities</h2>
+                            <ul class="responsive-list">
+                                <li>Designed and configured custom ABBYY FlexiCapture templates tailored for variable
+                                    OMR grids and handwritten ICR student fields.</li>
+                                <li>Defined field recognition thresholds, cross-field validation rules, and automated
+                                    export workflows mapped to individual department parameters.</li>
+                                <li>Extracted student responses from scanned physical exam sheets and handled
+                                    high-throughput data exports into structured CSV file layouts.</li>
+                                <li>Developed production SSIS packages to automate parsing and importing flat data
+                                    structures into relational tables.</li>
+                                <li>Programmed complex logic layers to check raw student answers against official target
+                                    answer keys for instant grading calculations.</li>
+                                <li>Implemented deep data cleansing protocols, including missing field validation,
+                                    duplicate isolation, extra space trimming, and structural logging constraints.</li>
+                                <li>Designed normalized database schematics, optimized indexes, stored procedures, and
+                                    programmatic data views.</li>
+                                <li>Coordinated testing phases alongside academic department heads during formal User
+                                    Acceptance Testing (UAT) and live production staging.</li>
+                            </ul>
+                        </section>
+
+                        <section class="case-section achievements">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Achievements</h2>
+                            <ul class="responsive-list highlight-list">
+                                <li>Successfully migrated manual examination sorting into an end-to-end automated
+                                    pipeline powered by robust OMR and ICR workflows.</li>
+                                <li>Engineered automated template rules within ABBYY FlexiCapture that eliminated false
+                                    positives during handwritten text extraction.</li>
+                                <li>Built a seamless pipeline from raw document scans through staging environments into
+                                    production SQL databases using SSIS integrations.</li>
+                                <li>Ensured total grading integrity by validating student matrix points against
+                                    authoritative answer configurations inside automated staging procedures.</li>
+                                <li>Delivered a highly secure, reliable, and scalable assessment repository that vastly
+                                    trimmed grading turnaround times while mitigating manual evaluation errors.</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <section class="case-section technologies">
+                        <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Technologies Used</h2>
+                        <ul class="tech-tags">
+                            <li>Microsoft SQL Server</li>
+                            <li>SQL Server Integration Services (SSIS)</li>
+                            <li>T-SQL</li>
+                            <li>ABBYY FlexiCapture</li>
+                            <li>Optical Mark Recognition (OMR)</li>
+                            <li>Intelligent Character Recognition (ICR)</li>
+                            <li>SQL Server Management Studio (SSMS)</li>
+                            <li>Stored Procedures</li>
+                            <li>Views</li>
+                            <li>Database Design</li>
+                            <li>Data Cleansing & Validation</li>
+                            <li>CSV Data Processing</li>
+                        </ul>
+                    </section>
+                </div>
+            </article>
+            <!-- The Man Company -->
+            <article class="case-card reveal">
+                <div class="case-content">
+                    <header class="case-header">
+                        <h3>Project 5: Bank of India – Account Opening Form Digitization & Data Validation System</h3>
+                        <p class="case-description">
+                            <strong>Role:</strong> Data Processing Specialist | ABBYY ICR Developer | SQL Server ETL
+                            Support <br>
+                            <strong>Client:</strong> Bank of India <br><br>
+                            Worked on the digitization and high-fidelity processing of account opening forms received
+                            from multiple corporate and retail branches of Bank of India. The solution focused on
+                            extracting sensitive customer profiles using ABBYY ICR technology, executing strict
+                            field-level validation pipelines, and securely loading validated transactional records into
+                            Microsoft SQL Server to support core banking operations and compliance checks.
+                        </p>
+                    </header>
+
+                    <div class="case-grid">
+                        <section class="case-section idea">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Responsibilities</h2>
+                            <ul class="responsive-list">
+                                <li>Designed and managed production document processing workflows for physical account
+                                    opening forms received from distributed bank branches.</li>
+                                <li>Processed high-volume scanned documents using ABBYY ICR engines for automated,
+                                    low-latency extraction of handwritten customer entries.</li>
+                                <li>Performed thorough field-wise validation of extracted customer metadata including
+                                    name patterns, address vectors, PAN details, identification records, and target
+                                    account specifications.</li>
+                                <li>Applied complex banking business rules to ensure strict data validation, relational
+                                    integrity, and cross-field consistency.</li>
+                                <li>Imported validated datasets into Microsoft SQL Server production tables using
+                                    structured ETL batch processes.</li>
+                                <li>Executed optimized SQL script payloads provided by the bank’s primary data center
+                                    for deep analytical rule checking.</li>
+                                <li>Identified, isolated, and corrected structural data quality anomalies before final
+                                    persistence.</li>
+                                <li>Coordinated direct handoffs with bank nodal officers for definitive data approval,
+                                    operational sign-off, and automated onboarding staging.</li>
+                                <li>Maintained absolute alignment with internal banking data standards and operational
+                                    compliance guidelines.</li>
+                            </ul>
+                        </section>
+
+                        <section class="case-section achievements">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Achievements</h2>
+                            <ul class="responsive-list highlight-list">
+                                <li>Streamlined and consolidated account opening form workflows across multiple regional
+                                    branches into a unified digital queue.</li>
+                                <li>Significantly elevated downstream data accuracy metrics by enforcing field-level
+                                    validation gates right at the ingestion layer.</li>
+                                <li>Drastically cut manual document processing cycle times by implementing automated
+                                    ABBYY-based character recognition pipelines.</li>
+                                <li>Guaranteed zero data leakage and total transmission security during structured ETL
+                                    loading phases into central SQL Server clusters.</li>
+                                <li>Successfully delivered completely scrubbed, verified, and audited datasets to bank
+                                    nodal officers to unblock immediate customer onboarding.</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <section class="case-section technologies">
+                        <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Technologies Used</h2>
+                        <ul class="tech-tags">
+                            <li>ABBYY ICR (Intelligent Character Recognition)</li>
+                            <li>Microsoft SQL Server</li>
+                            <li>T-SQL</li>
+                            <li>Data Validation Rules</li>
+                            <li>CSV/Data Import Processes</li>
+                            <li>Document Digitization Tools</li>
+                            <li>Banking Data Processing Systems</li>
+                        </ul>
+                    </section>
+                </div>
+            </article>
+            <!-- Carrier Midea -->
+            <article class="case-card reveal">
+                <div class="case-content">
+                    <header class="case-header">
+                        <h3>Project 6: Municipal Corporation of Greater Mumbai (MCGM) – Birth & Death Records Management
+                            System</h3>
+                        <p class="case-description">
+                            <strong>Role:</strong> SQL Server DBA | ETL Developer | Data Engineer <br>
+                            <strong>Client:</strong> Municipal Corporation of Greater Mumbai (MCGM) <br><br>
+                            Managed a mission-critical SQL Server database repository supporting the Municipal
+                            Corporation of Greater Mumbai (MCGM) for the centralized management of over 80 million Birth
+                            and Death records. The project focused on consolidating data streams received from multiple
+                            external vendors, engineering a scalable ward-wise database architecture, developing
+                            high-throughput ETL pipelines via SSIS, enforcing rigorous duplicate detection, and ensuring
+                            database high availability for government operational reporting.
+                        </p>
+                    </header>
+
+                    <div class="case-grid">
+                        <section class="case-section idea">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Responsibilities</h2>
+                            <ul class="responsive-list">
+                                <li>Designed and implemented the complete SQL Server database architecture for handling
+                                    centralized civil registries.</li>
+                                <li>Created normalized database layouts, relational schemas, clustered/non-clustered
+                                    indexes, stored procedures, views, and custom functions.</li>
+                                <li>Designed a scalable ward-wise partitioning model to cleanly separate and index
+                                    records across all MCGM administrative boundaries.</li>
+                                <li>Developed robust SSIS packages to automate, parse, and ingest vendor data deliveries
+                                    provided in disparate formats like Excel, CSV, and flat text files.</li>
+                                <li>Implemented strict data cleansing algorithms to eliminate duplicates by evaluating
+                                    Registration Numbers, Names, Years, Dates, and Ward Codes simultaneously.</li>
+                                <li>Optimized complex T-SQL queries, index layouts, and query execution plans to fluidly
+                                    manage large-scale analytical tables exceeding 80 million entries.</li>
+                                <li>Managed database administration duties including daily backups, recovery
+                                    verifications, automated maintenance plans, and deadlock mitigation.</li>
+                                <li>Coordinated directly with external vendors to align data integration quality and
+                                    generated detailed cross-ward metrics for management reporting.</li>
+                            </ul>
+                        </section>
+
+                        <section class="case-section achievements">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Achievements</h2>
+                            <ul class="responsive-list highlight-list">
+                                <li>Successfully engineered and maintained a highly scalable production database holding
+                                    over 80 million mission-critical Birth and Death records.</li>
+                                <li>Automated cross-vendor data integration flows using SSIS, massively cutting down
+                                    manual processing overhead and validation backlogs.</li>
+                                <li>Delivered a highly performant ward-wise schema optimized for rapid local data
+                                    retrieval and multi-year comparative analytics.</li>
+                                <li>Significantly improved overall ledger accuracy by building automated duplicate
+                                    isolation, scrubbing, and data reconciliation scripts.</li>
+                                <li>Optimized long-running queries and indexing strategies to maintain low-latency
+                                    read/write performance during intensive batch operations.</li>
+                                <li>Established comprehensive disaster recovery plans and maintenance scripts to
+                                    guarantee uptime for critical public administrative services.</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <section class="case-section technologies">
+                        <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Technologies Used</h2>
+                        <ul class="tech-tags">
+                            <li>Microsoft SQL Server</li>
+                            <li>SQL Server Integration Services (SSIS)</li>
+                            <li>T-SQL</li>
+                            <li>SQL Server Management Studio (SSMS)</li>
+                            <li>Stored Procedures</li>
+                            <li>Views</li>
+                            <li>User-Defined Functions (UDFs)</li>
+                            <li>Database Design & Data Modeling</li>
+                            <li>Index Optimization</li>
+                            <li>Query Performance Tuning</li>
+                            <li>Database Backup & Recovery</li>
+                            <li>SQL Server Maintenance Plans</li>
+                            <li>Data Cleansing & Validation</li>
+                        </ul>
+                    </section>
+                </div>
+            </article>
+            <!-- Nissan -->
+            <article class="case-card reveal">
+                <div class="case-content">
+                    <header class="case-header">
+                        <h3>Project 7: Raven LMS – Database Design, Configuration & Data Seeding Automation</h3>
+                        <p class="case-description">
+                            <strong>Client:</strong> Wolters Kluwer <br><br>
+                            Designed and developed the core database foundation for the Raven Learning Management System
+                            (LMS) for Wolters Kluwer. The project focused on building a scalable relational database
+                            structure, implementing robust system configuration modules, and automating transactional
+                            data seeding processes for crucial LMS entities—including users, roles, programs, courses,
+                            badge mechanics, and certification assets. The architecture gracefully supports batch data
+                            processing from multiple external learning platforms via structured CSV pipelines.
+                        </p>
+                    </header>
+
+                    <div class="case-grid">
+                        <section class="case-section idea">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Responsibilities</h2>
+                            <ul class="responsive-list">
+                                <li>Designed and implemented the primary relational database schema governing all core
+                                    LMS sub-systems (users, roles, programs, courses, badges, and certifications).</li>
+                                <li>Developed highly secure transactional T-SQL scripts utilizing robust COMMIT and
+                                    ROLLBACK error-handling blocks to safeguard transactional integrity during
+                                    execution.</li>
+                                <li>Managed complex relational mappings and foreign-key configurations across main
+                                    entities to establish strict referential integrity.</li>
+                                <li>Built extensible system configuration tables and modules covering custom avatar
+                                    profiles, gamified badge systems, and certification compliance metadata.</li>
+                                <li>Engineered performant SQL workflows and cursors to parse, transform, and ingest
+                                    external learning metrics provided via legacy CSV exports.</li>
+                                <li>Wrote programmatic data cleansing logic to isolate formatting inconsistencies, scrub
+                                    input errors, and sanitize data sets prior to target persistence.</li>
+                                <li>Collaborated tightly with frontend UI and middleware API developers to align query
+                                    structures, schemas, and indexing strategies with application layers.</li>
+                                <li>Coordinated directly with corporate stakeholders through complete testing cycles up
+                                    to successful production sign-off.</li>
+                            </ul>
+                        </section>
+
+                        <section class="case-section achievements">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Achievements</h2>
+                            <ul class="responsive-list highlight-list">
+                                <li>Successfully engineered the architecture for a high-performance, modular LMS
+                                    database engine capable of scaling alongside user enrollment growth.</li>
+                                <li>Eliminated structural seeding vulnerabilities by implementing fail-safe
+                                    transactional scripts that guarantee zero database corruption during bulk load
+                                    failures.</li>
+                                <li>Unified disparate third-party learning metrics into a standardized, clean relational
+                                    storage model for streamlined enterprise reporting.</li>
+                                <li>Automated the deployment lifecycle of core system assets, shrinking manual setup
+                                    overhead across testing and production environments.</li>
+                                <li>Delivered a highly secure, clean, and fully validated enterprise database layout
+                                    matching strict Wolters Kluwer data processing standards.</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <section class="case-section technologies">
+                        <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Technologies Used</h2>
+                        <ul class="tech-tags">
+                            <li>Microsoft SQL Server</li>
+                            <li>T-SQL</li>
+                            <li>Database Design & Architecture</li>
+                            <li>Relational Data Modeling</li>
+                            <li>SQL Transactions (Commit/Rollback)</li>
+                            <li>ETL Processing</li>
+                            <li>Data Cleansing & Validation</li>
+                            <li>CSV Data Automation</li>
+                            <li>SQL Server Management Studio (SSMS)</li>
+                            <li>Stored Procedures & Cursors</li>
+                        </ul>
+                    </section>
+                </div>
+            </article> <!-- FEREBE -->
+            <article class="case-card reveal">
+                <div class="case-content">
+                    <header class="case-header">
+                        <h3>Project 8: Apollo 2.0 – Content Management & Digital Asset Platform</h3>
+                        <p class="case-description">
+                            <strong>Role:</strong> SQL Server Database Developer | Database Designer <br><br>
+                            Designed and developed the Microsoft SQL Server database engine for the Apollo 2.0 Content
+                            Management Platform. The project focused on building a scalable, high-performance relational
+                            database to manage digital content streams, user access patterns, metadata tagging
+                            structures, administrative groups, presentation slides, and dynamic learning assets. The
+                            solution delivered robust relational mappings and master data populations to ensure
+                            seamless, low-latency application integration.
+                        </p>
+                    </header>
+
+                    <!-- Side-by-Side Dynamic Grid on Desktop, Vertical Stack on Mobile -->
+                    <div class="case-grid">
+                        <section class="case-section idea">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Responsibilities</h2>
+                            <ul class="responsive-list">
+                                <li>Designed and implemented the primary relational database schema architecture using
+                                    Microsoft SQL Server.</li>
+                                <li>Created core structural tables for modular subsystems including Users, User Types,
+                                    Content, Content Types, Meta Tags, Groups, Slides, and Thumbnails.</li>
+                                <li>Developed production-ready T-SQL scripts for isolated database environment creation,
+                                    schema initialization, and transactional data seeding.</li>
+                                <li>Enforced database-level integrity rules using explicit primary keys, unique
+                                    constraints, index constraints, and auto-incrementing identity columns.</li>
+                                <li>Designed complex relational mappings between content assets, metadata vectors,
+                                    groups, and end-users to support deep hierarchical sorting.</li>
+                                <li>Developed and maintained administrative SQL scripts utilized for inserting and
+                                    maintaining application lookups and master configuration data.</li>
+                                <li>Optimized query execution paths and relational dependencies to accommodate future
+                                    enhancements and multi-tenant scaling.</li>
+                                <li>Coordinated closely with frontend engineering and middleware teams to smoothly
+                                    integrate database tables with external API frameworks.</li>
+                                <li>Supported strict DevOps deployment guardrails across Development, UAT testing
+                                    environments, and production systems.</li>
+                            </ul>
+                        </section>
+
+                        <section class="case-section achievements">
+                            <h2 style="color: #ffffff; font-weight: bold; font-style: italic;">Key Achievements</h2>
+                            <ul class="responsive-list highlight-list">
+                                <li>Successfully delivered a highly scalable and normalized SQL Server database model
+                                    optimized for modern content platform management.</li>
+                                <li>Automated environment build cycles and master data population steps using reusable,
+                                    idempotent T-SQL deployment scripts.</li>
+                                <li>Guaranteed total relational consistency and data integrity by embedding structural
+                                    mapping constraints directly at the database engine layer.</li>
+                                <li>Supported zero-downtime database deployment pipelines across staging and live
+                                    production cluster environments after securing stakeholder sign-off.</li>
+                                <li>Improved overall application response metrics by structuring highly efficient
+                                    indexes and optimizing relational table joins.</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <!-- Technologies Grid Footer Component -->
+                    <section class="case-section technologies">
+                        <h2>Technologies Used</h2>
+                        <ul class="tech-tags">
+                            <li>Microsoft SQL Server</li>
+                            <li>T-SQL</li>
+                            <li>SQL Server Management Studio (SSMS)</li>
+                            <li>Database Design</li>
+                            <li>Relational Database Modeling</li>
+                            <li>Stored Procedures</li>
+                            <li>Constraints & Indexes</li>
+                            <li>Data Seeding Scripts</li>
+                            <li>SQL Query Optimization</li>
+                        </ul>
+                    </section>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="industries-section reveal">
+        <div class="industries-inner">
+            <div class="section-label" style="color: #ffffff; font-weight: bold; font-style: italic;">04 Industries</div>
+            <h2 class="section-heading" style="color:var(--paper); max-width:18ch;">Same core infrastructure, <em> very
+                    different domains.</em>.</h2>
+
+            <div class="industries-grid">
+                <div class="industry">
+                    <div class="industry-num">/ 01</div>
+                    <div class="industry-name"><em>FMCG</em> &amp; Public Sector & GovTech</div>
+                    <div class="industry-clients">Sub-text / Project examples: Bureau of Immigration, Municipal
+                        Corporation of Greater Mumbai (MCGM), Government of Rajasthan . Defence Accounts Pension DOCX +
+                        3</div>
+                </div>
+                <div class="industry">
+                    <div class="industry-num">/ 02</div>
+                    <div class="industry-name"><em>Legal Tech & </em> &amp; Enterprise SaaS</div>
+                    <div class="industry-clients">Sub-text / Project examples: Wolters Kluwer (Raven LMS & LegalVIEW
+                        BillAnalyzer frameworks) , XClaymation Media Applications</div>
+                </div>
+                <div class="industry">
+                    <div class="industry-num">/ 03</div>
+                    <div class="industry-name"><em> BFSI & Higher Education</em></div>
+                    <div class="industry-clients">Sub-text / Project examples: Bank of India (Account Opening Form
+                        Validation Systems), Tata Institute of Social Sciences (TISS Mumbai)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact-section reveal" id="contact">
+        <div class="section-label">06 Get In Touch</div>
+        <div class="contact-grid">
+            <h2 class="contact-heading">Have a brief? <em>Let's talk.</em></h2>
+            <div class="contact-info">
+                <a class="contact-row" href="mailto:shubhi3gupta@gmail.com">
+                    <span class="label" style="color: #ffffff; font-weight: bold; font-style: italic;">Email</span>
+                    <span class="value" style="color: #ffffff; font-weight: bold; font-style: italic;"> ranjeetks2009@gmail.com</span>
+                </a>
+
+                <a class="contact-row" href="#">
+                    <span class="label" style="color: #ffffff; font-weight: bold; font-style: italic;">Based in</span>
+                    <span class="value" style="color: #ffffff; font-weight: bold; font-style: italic;">Mumbai, India</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <span style="color: #ffffff; font-weight: bold; font-style: italic;">© 2026 Ranjit Kumar · All work shown belongs to respective brands</span>
+            <span style="color: #ffffff; font-weight: bold; font-style: italic;">Designed <em>with intent</em></span>
+        </div>
+    </footer>
+
+    <script>
+        // Progressive enhancement
+        document.documentElement.classList.add('js');
+
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!prefersReduced) {
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+            }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+            document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+            // Safety net: ensure no element ever stays invisible permanently
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in'));
+                }, 1500);
+            });
+        } else {
+            document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+        }
+
+        // Case gallery arrow controls
+        document.querySelectorAll('.case-gallery-wrap').forEach((wrap) => {
+            const gallery = wrap.querySelector('.case-gallery');
+            const prev = wrap.querySelector('.gallery-nav.prev');
+            const next = wrap.querySelector('.gallery-nav.next');
+            if (!gallery || !prev || !next) return;
+
+            const getStep = () => {
+                const first = gallery.querySelector('img');
+                const gap = parseFloat(getComputedStyle(gallery).gap || '0');
+                return (first ? first.getBoundingClientRect().width : gallery.clientWidth) + gap;
+            };
+
+            const updateButtons = () => {
+                const maxLeft = gallery.scrollWidth - gallery.clientWidth - 1;
+                prev.disabled = gallery.scrollLeft <= 1;
+                next.disabled = gallery.scrollLeft >= maxLeft;
+            };
+
+            prev.addEventListener('click', () => {
+                gallery.scrollBy({ left: -getStep(), behavior: 'smooth' });
+            });
+
+            next.addEventListener('click', () => {
+                gallery.scrollBy({ left: getStep(), behavior: 'smooth' });
+            });
+
+            gallery.addEventListener('scroll', updateButtons, { passive: true });
+            window.addEventListener('resize', updateButtons);
+            updateButtons();
+        });
+    </script>
+
+</body>
+
+</html>
